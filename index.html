@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xploit '24</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="public/css/styles.css">
+     <!-- Favicon -->
+     <link rel="img" href="img/favicon.ico" type="image/x-icon">
+       <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/Xploit_logo.png" alt="Logo" style="height: 5em;">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About Xploit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#event-timeline">Event Timeline</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#coordinators-section">Connect with Us</a>
+                </li>
+            </ul>
+            <a href="public/studentDashboard.html" class="btn btn-light btn-primary">Student Dashboard</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video Background -->
+    <header class="hero">
+        <video autoplay loop id="background-video">
+            <source src="public/vid/Video Intro.mp4" type="video/mp4">
+            <!-- Your browser does not support the video tag. -->
+        </video>
+        <div class="hero-content">
+            <br>
+            <h1>Welcome to</h1>
+            <img src="public/img/Xploit_logo.png" alt="Logo" class="animated-logo" style="height: 6em;">
+            <br>
+            <p>Unleash Your Potential at Xploit: Ignite Your Passion, Master the Future!</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container py-5">
+        <h2 class="text-center space-mono-bold">About Xploit</h2>
+        <!-- <hr class="dot"> -->
+        <span class="dots">•••</span>
+        <br>
+        <p class="xploit-desc"> Welcome to <strong>SYNCHROTECH 2024 Xploit</strong> 
+            Welcome to SYNCHROTECH 2024 Xploit, the premier cybersecurity event where the brightest minds converge to tackle exhilarating challenges!
+            This high-stakes competition kicks off with a Qualification Round, where teams of two will test their
+            knowledge through a rigorous online quiz on core cybersecurity concepts. The journey continues with the Capture The Flag (CTF) round, 
+            where participants will dive into complex scenarios involving web exploitation, cryptography, and binary analysis under intense pressure. 
+            The grand finale is the Escape Room challenge, where teams must solve intricate cybersecurity puzzles to "escape" a simulated crisis. 
+            With each round designed to escalate in complexity, Xploit promises an action-packed experience that pushes the limits of skill and teamwork, 
+            celebrating the passion and prowess of cybersecurity enthusiasts everywhere.
+
+
+        </p>
+    </section>
+
+    <!-- event overview -->
+    <section id="guidelines" class="container py-5">
+        <h2 class="text-center space-mono-bold">Event Overview</h2>
+        <!-- <hr class="dot"> -->
+        <span class="dots">•••</span>
+        
+        <div class="event-details">
+            <h3>General Guidelines</h3>
+            <ul class="description">
+                <li><strong>Teams:</strong> 2 members</li>
+                <li><strong>Format:</strong> Three rounds of escalating difficulty</li>
+                <li><strong>Focus:</strong> Computational Studies, Tagline & Logo ID</li>
+                <li><strong>Rules:</strong> No malpractice</li>
+            </ul>
+
+            <h3>Rounds</h3>
+            <div class="timeline">
+                <div class="timeline-item" onclick="toggleDetails('round1')">
+                    <h4>Round 1: Qualification (MCQs)</h4>
+                    <div id="round1" class="details">
+                        <p class="description">Format: Online Quiz</p>
+                        <p class="description">Topics: Basics of cybersecurity, networking, and threat analysis</p>
+                        <p class="description">Duration: 30 minutes (30 Questions)</p>
+                        <p class="description">Selection: Top 15-20 teams advance</p>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="toggleDetails('round2')">
+                    <h4>Round 2: Capture The Flag</h4>
+                    <div id="round2" class="details">
+                        <p class="description">Format: Team-based Challenge</p>
+                        <p class="description">Topics: Web exploitation, cryptography</p>
+                        <p class="description">Duration: 1.5 hours (10 Questions)</p>
+                        <p class="description">Selection: Top 8-10 teams proceed</p>
+                    </div>
+                </div>
+                <div class="timeline-item" onclick="toggleDetails('round3')">
+                    <h4>Round 3: Escape Room</h4>
+                    <div id="round3" class="details">
+                        <p class="description">Format: Virtual Escape Room</p>
+                        <p class="description">Objective: Solve puzzles to "escape"</p>
+                        <p class="description">Duration: 2 hours</p>
+                        <p class="description">Rules: Hints reduce time; fastest escape wins</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+  <!-- Event Timeline Section -->
+<section id="event-timeline" class="container py-5 bg-dark-gray">
+    <h2 class="text-center bold-font">Event Timeline</h2>
+    <span class="dots">•••</span>
+
+    <div class="event-timeline-container">
+        <!-- Event Points -->
+        <div class="event-timeline-item" style="left: 5%;">
+            <div class="event-timeline-dot"></div>
+            <div class="event-timeline-date">Prelims</div>
+            <div class="event-timeline-popup">
+                <strong>Xploit - Prelims</strong><br>
+                <b>Date:</b> 11th Sept 2024<br>
+                <b>Time:</b> 5:00pm - 5:30pm<br>
+                <b>Venue:</b> M2 Lab
+            </div>
+        </div>
+        <div class="event-timeline-item" style="left: 30%;">
+            <div class="event-timeline-dot"></div>
+            <div class="event-timeline-date">Semifinal</div>
+            <div class="event-timeline-popup">
+                <strong>Xploit - Semifinal</strong><br>
+                <b>Date:</b> 17th Sept 2024<br>
+                <b>Time:</b> 4:30pm - 6:00pm<br>
+                <b>Venue:</b> M5 Lab
+            </div>
+        </div>
+        <div class="event-timeline-item" style="left: 55%;">
+            <div class="event-timeline-dot"></div>
+            <div class="event-timeline-date">Finals</div>
+            <div class="event-timeline-popup">
+                <strong>Xploit - Finals</strong><br>
+                <b>Date:</b> 19th Sept 2024<br>
+                <b>Time:</b> 4:30pm - 6:30pm<br>
+                <b>Venue:</b> M5 Lab
+            </div>
+        </div>
+        <div class="event-timeline-item" style="left: 80%;">
+            <div class="event-timeline-dot"></div>
+            <div class="event-timeline-date">Result</div>
+            <div class="event-timeline-popup">
+                <strong>Result Announcement</strong><br>
+                <b>Date:</b> 20th Sept<br>
+                Stay tuned!...
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Connect with Us -->
+    <section id="coordinators-section" class="coordinators-section">
+        <h2 class="section-title">Connect with Us</h2>
+        <span class="dots extra-b-margin">•••</span>
+
+        <div class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="coordinator-text">Coordinator</h3>
+                    <!-- <div class="divider"></div> -->
+                </div>
+                <div class="card-body">
+                    <div class="card-image">
+                        <img src="public/img/22BCAF29_HemantK.JPG" alt="Coordinator 1">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="name">Hemant Kumar</h4>
+                        <p class="email">22bcaf29@kristujayanti.com</p>
+                        <p class="phone">+91 7651901638</p>
+                        <div class="social-media">
+                            <a href="https://instagram.com/mr.ji421" target="_blank" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.com/in/hemantkumar421" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/MrJi421" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                            <a href="https://profilemrji421.netlify.app" target="_blank" class="social-icon website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="coordinator-text">Coordinator</h3>
+                    <!-- <div class="divider"></div> -->
+                </div>
+                <div class="card-body">
+                    <div class="card-image">
+                        <img src="public/img/22CDSA14_CHRIS A SAMUEL.JPG" alt="Coordinator 2">
+                    </div>
+                    <div class="card-content">
+                        <h4 class="name">Chris A Samuel</h4>
+                        <p class="email">22cdsa14@kristujayanti.com</p>
+                        <p class="phone">+91 9876543212</p>
+                        <div class="social-media">
+                            <a href="https://instagram.com" target="_blank" class="social-icon insta"><i class="fab fa-instagram"></i></a>
+                            <a href="https://linkedin.com" target="_blank" class="social-icon linkedin"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com" target="_blank" class="social-icon github"><i class="fab fa-github"></i></a>
+                            <a href="https://personalwebsite.com" target="_blank" class="social-icon website"><i class="fas fa-globe"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3">
+        &copy;2024 Xploit '24'. All rights reserved | Developed by <strong><a href="https://github.com/MrJi421/"><u>@Hemant Kumar</u></a></strong> and <strong><a href="https://github.com/MrJi421/"><u>@Rajan K Sahni</u></a></strong>
+    </footer>
+
+    <!-- Scripts -->
+     <script src="public/js/scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

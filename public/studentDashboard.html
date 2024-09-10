@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xploit '24 - Student Dashboard</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/SD_styles.css"> <!-- Link to custom CSS file -->
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">
+            <img src="img/synchrotech_logo.png" alt="synchrotech_logo" class="nav-logo">
+        </a>
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="img/Xploit_logo.png" alt="Xploit_logo" class="nav-logo">
+        </a>
+        <button class="btn btn-danger logout-btn" id="logoutBtn">Home</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        
+        <div class="text-center hero-content">
+            <h1>Welcome to Xploit '24</h1>
+            <p>Xploit '24 is an exciting event that brings together students to showcase their skills and participate in various challenges. Get ready for an unforgettable experience filled with learning and competition.</p>
+        </div>
+
+        <div class="card-container">
+            <a href="prelimsquiz.html" class="text-decoration-none">
+                <div class="rounded-card">
+                    <div class="card-title">Prelims <br> (MCQs)</div>
+                    <div class="card-text">Test your knowledge with multiple-choice questions in the preliminary round.</div>
+                </div>
+            </a>
+                <div class="rounded-card">
+                    <div class="card-title">Semifinal <br> (CTF)</div>
+                    <div class="card-text">Compete in Capture The Flag challenges to advance to the finals.</div>
+                </div>
+                <div class="rounded-card">
+                    <div class="card-title">Final <br> (Escape Room)</div>
+                    <div class="card-text">Solve puzzles and escape in the final round to be crowned the champion.</div>
+                </div>
+        </div>
+
+        <div class="guidelines mt-5">
+            <h3>Guidelines</h3>
+            <ul>
+                <li>Ensure you are familiar with the event rules and regulations.</li>
+                <li>Prepare all necessary materials and resources in advance.</li>
+                <li>Follow the event schedule and participate in all rounds.</li>
+                <li>Contact the event coordinators for any queries or issues.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3">
+        &copy;2024 Xploit '24 | All rights reserved | Developed by <strong><a href="https://github.com/MrJi421/"><u>@Hemant Kumar</u></a></strong> and <strong><a href="https://github.com/MrJi421/"><u>@Rajan K Sahni</u></a></strong>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/SD_scripts.js"></script> <!-- Link to custom JS file -->
+</body>
+</html>

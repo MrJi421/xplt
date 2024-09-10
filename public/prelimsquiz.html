@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xploit '24 - Student Dashboard</title>
+    <meta name="description" content="Xploit '24 is an exciting event bringing together students to showcase their skills in various challenges.">
+    <meta property="og:title" content="Xploit '24 - Student Dashboard">
+    <meta property="og:description" content="Join Xploit '24 and test your skills in exciting challenges.">
+    <meta property="og:image" content="img/og-image.png">
+    <meta property="og:url" content="http://example.com/xploit24">
+    <meta name="twitter:card" content="summary_large_image">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/SD_styles.css">
+    <link rel="stylesheet" href="css/prelims_styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            width: 100%;
+            height: 80vh; /* Adjust height as needed */
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* For logging purposes */
+        #logger {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 10px;
+            max-height: 150px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom" role="navigation" aria-label="Main Navigation">
+        <a class="navbar-brand" href="#">
+            <img src="img/synchrotech_logo.png" alt="Synchrotech Logo" class="nav-logo">
+        </a>
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="img/Xploit_logo.png" alt="Xploit Logo" class="nav-logo">
+        </a>
+        <button class="btn btn-danger logout-btn" id="logoutBtn">Dashboard</button>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <div class="text-center hero-content">
+            <h1>Welcome to Preliminary Round of Xploit '24</h1>
+            <p>All the best in Cyber Lang!</p>
+        </div>
+
+        <!-- Fullscreen Container -->
+        <div id="fullscreen-div" class="form-container mt-5">
+            <h3>Quiz</h3>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScfawqaNIWs0Sw82MGy3wC9vonJ8Ztwbp9m_WDEAnf4U6iDIA/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-3">
+        &copy;2024 Xploit '24 | All rights reserved | Developed by <strong><a href="https://github.com/MrJi421/" target="_blank" rel="noopener noreferrer"><u>@Hemant Kumar</u></a></strong> and <strong><a href="https://github.com/MrJi421/" target="_blank" rel="noopener noreferrer"><u>@Rajan K Sahni</u></a></strong>
+    </footer>
+
+    <!-- Logging Container -->
+    <div id="logger"></div>
+
+    <!-- Scripts -->
+    <script>
+        function log(message) {
+            const logger = document.querySelector("#logger");
+            logger.textContent = `${logger.textContent}\n${message}`;
+        }
+
+        function fullscreenchanged(event) {
+            if (document.fullscreenElement) {
+                log(`Element: ${document.fullscreenElement.id} entered fullscreen mode.`);
+            } else {
+                log("Leaving fullscreen mode.");
+            }
+        }
+
+        function enterFullscreen() {
+            const elem = document.documentElement;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.mozRequestFullScreen) { /* Firefox */
+                elem.mozRequestFullScreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            enterFullscreen();
+
+            document.addEventListener("fullscreenchange", fullscreenchanged);
+            document.addEventListener("webkitfullscreenchange", fullscreenchanged); /* Safari */
+            document.addEventListener("mozfullscreenchange", fullscreenchanged); /* Firefox */
+            document.addEventListener("MSFullscreenChange", fullscreenchanged); /* IE11 */
+        });
+    </script>
+</body>
+</html>

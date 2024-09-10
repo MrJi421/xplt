@@ -1,0 +1,134 @@
+
+html{
+    scroll-behavior: smooth;
+}
+/* General Styles */
+body {
+    font-family: 'Space Mono', monospace;
+    color: #EAEAEA;
+    margin: 0;
+    padding: 0;
+    background-color: #1B1B2F;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure body takes at least full viewport height */
+}
+
+/* Navbar */
+.navbar-custom {
+    background-color: #4A148C; /* Dark background for navbar */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logos in Navbar */
+.nav-logo {
+    height: 60px; /* Adjust logo height */
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: #D9534F; /* Red background for logout button */
+    border: none;
+    font-size: 16px;
+    padding: 0.5rem 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #C9302C; /* Darker red on hover */
+}
+
+Hero Content
+.hero-content {
+    text-align: center;
+    color: #EAEAEA; 
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 1000px;
+    margin: 1rem auto;
+    height: 8rem;
+    color: #949494;
+}
+
+/* Guidelines */
+.guidelines {
+    background-color: #2C2C3B;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.guidelines h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.guidelines ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2E2E4F;
+    color: #EAEAEA;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    max-width: 1500px;
+    margin: 2rem auto; /* Center horizontally and add top and bottom margin */
+    justify-content: center; /* Center items horizontally within the container */
+}
+
+/* Card Styles */
+.rounded-card {
+    background-color: rgba(146, 56, 255, 0.4); 
+    border-radius: 15px;
+    padding: 1.5rem;
+    color: #EAEAEA;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1 1 30%; /* Flex basis for responsive layout */
+    max-width: 250px; /* Max width for each card */
+    
+}
+
+.rounded-card:hover {
+    background-color: #4A148C;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #B0B0B0; /* Slightly lighter color for description */
+    margin-bottom: 0;
+}
+
+

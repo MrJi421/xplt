@@ -1,0 +1,224 @@
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+
+body {
+    background-color: #170926; /* Dark background color */
+    color: #EAEAEA; /* Light text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Space Mono';
+}
+
+.container {
+    max-width: 500px;
+}
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.logo img {
+    max-width: 150px; /* Adjust size as needed */
+}
+
+.login-wrapper {
+    background: #1D1D2C; /* Dark violet background */
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.login-form h2 {
+    margin-bottom: 1rem;
+    color: #EAEAEA;
+}
+
+.form-group {
+    position: relative;
+}
+
+.invalid-feedback {
+    display: none;
+    color: #dc3545;
+}
+
+.form-control:invalid {
+    border-color: #dc3545;
+}
+
+.form-control:invalid ~ .invalid-feedback {
+    display: block;
+}
+
+.btn-primary {
+    background-color: #4A148C; /* Dark violet color */
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #6A1B9A; /* Lighter violet on hover */
+}
+
+.forgot-password {
+    color: #4A148C;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background: #1D1D2C;
+    color: #EAEAEA;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #dc3545;
+}
+
+
+/* Alert Container */
+#alertContainer {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    z-index: 1000; /* Ensure it appears above other content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Alert Styles */
+.alert {
+    color: #000000;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem;
+    max-width: 90%; /* Adjust width as needed */
+    text-align: center;
+    position: relative;
+    animation: slideDown 0.5s ease-out;
+}
+
+/* Success Alert */
+.alert-success {
+    background-color: #28a745; /* Green for success */
+}
+
+/* Error Alert */
+.alert-error {
+    background-color: #dc3545; /* Red for error */
+}
+
+
+/* Animation */
+@keyframes slideDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-50px); opacity: 0; }
+}
+
+
+
+/* CSS for the "Back to Home" button */
+.back-to-home {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #4A148C;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #6A1B9A;
+}
+
+
+/* Blinking Dots Background */
+.blinking-dots-bg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure it does not interfere with interactions */
+    z-index: -1; /* Place it behind other content */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%);
+    background-size: 10px 10px; /* Size of the dots */
+    background-position: 0 0, 10px 10px, 20px 20px, 30px 30px; /* Dot positions */
+    background-repeat: repeat;
+    animation: blink 1.5s infinite;
+}
+
+.blinking-dots-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensure it does not interfere with interactions */
+    z-index: -1; /* Place it behind other content */
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%),
+                radial-gradient(circle, rgba(255, 255, 255, 0.1) 20%, transparent 20%);
+    background-size: 10px 10px; /* Size of the dots */
+    background-position: 0 0, 10px 10px, 20px 20px, 30px 30px; /* Dot positions */
+    background-repeat: repeat;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
